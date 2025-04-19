@@ -1,11 +1,15 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.9-slim' // base image with Python
+        }
+    }
 
     stages {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("cryptoscan-image")
+                    def dockerImage = docker.build("cryptoscan-image")
                 }
             }
         }
@@ -13,7 +17,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    dockerImage.run("-p 5000:5000")
+                    docker.image("cryptoscan-image").run("-p 5000:5000")
                 }
             }
         }
