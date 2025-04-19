@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        // Optional: specify Python path if needed
         PYTHON = 'python'
         PIP = 'pip'
     }
@@ -10,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/chaitanyasonaje/CryptoScan.git'
+                git branch: 'main', url: 'https://github.com/chaitanyasonaje/CryptoScan.git'
             }
         }
 
