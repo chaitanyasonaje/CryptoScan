@@ -1,17 +1,38 @@
 pipeline {
     agent any
 
+    environment {
+        // Optional: specify Python path if needed
+        PYTHON = 'python'
+        PIP = 'pip'
+    }
+
     stages {
-        stage('Build Docker Image') {
+        stage('Checkout') {
             steps {
-                bat 'docker build -t cryptoscan .'
+                git 'https://github.com/chaitanyasonaje/CryptoScan.git'
             }
         }
 
-        stage('Run Docker Container') {
+        stage('Install Dependencies') {
             steps {
-                bat 'docker run -d -p 5000:5000 cryptoscan'
+                bat "${PIP} install -r requirements.txt"
             }
+        }
+
+        stage('Run App') {
+            steps {
+                bat "${PYTHON} app.py"
+            }
+        }
+    }
+
+    post {
+        failure {
+            echo '❌ Pipeline failed. Please check the logs above.'
+        }
+        success {
+            echo '✅ Pipeline completed successfully.'
         }
     }
 }
