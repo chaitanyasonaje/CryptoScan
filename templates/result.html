@@ -6,11 +6,51 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    /* Custom styles */
+    .transition {
+      transition: all 0.3s ease-in-out;
+    }
+    .dark .bg-gray-100 {
+      background-color: #1f2937;
+    }
+    .dark .text-gray-900 {
+      color: #f3f4f6;
+    }
+    .fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    .slideInLeft {
+      animation: slideInLeft 1s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    /* Button animation */
+    .hover\:scale-105:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body class="transition bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
 
-  <div class="max-w-4xl mx-auto mt-10 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
-    <div class="flex justify-between items-center">
+  <div class="max-w-4xl mx-auto mt-10 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md fadeIn">
+    <div class="flex justify-between items-center slideInLeft">
       <h2 class="text-2xl font-bold">🧠 Prediction Result</h2>
       <div>
         <button id="toggleTheme" class="px-3 py-1 rounded bg-gray-300 dark:bg-gray-700 dark:text-white text-sm">Toggle Dark Mode</button>
@@ -29,12 +69,12 @@
           <option value="line">Line Chart</option>
         </select>
       </div>
-      <canvas id="asciiChart"></canvas>
+      <canvas id="asciiChart" class="fadeIn"></canvas>
     </div>
 
     <div class="my-6">
       <h3 class="text-xl font-semibold mb-2">🎯 Top 10 ASCII Characters</h3>
-      <canvas id="pieChart"></canvas>
+      <canvas id="pieChart" class="fadeIn"></canvas>
     </div>
 
     <div class="my-6">
@@ -48,8 +88,8 @@
     </div>
 
     <div class="flex justify-between mt-6">
-      <a href="/" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">🔁 Try Another</a>
-      <button id="exportPDF" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">📄 Export as PDF</button>
+      <a href="/" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 hover:scale-105 transition">🔁 Try Another</a>
+      <button id="exportPDF" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 hover:scale-105 transition">📄 Export as PDF</button>
     </div>
   </div>
 
