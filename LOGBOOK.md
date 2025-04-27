@@ -1,3 +1,7 @@
+Here's the updated logbook reflecting your commit history:
+
+---
+
 # 📖 CryptoScan Project - Logbook
 
 **Project Title**: CryptoScan - AI-Powered Cryptographic Algorithm Identification  
@@ -16,9 +20,10 @@
 | 3    | 28/02/2025           | Flask backend setup and initial API route (`/predict`) created  |
 | 4    | 02/03/2025 - 07/03/2025 | Core modules development: upload, feature extraction, ML models |
 | 5    | 10/03/2025           | Interactive dashboard UI, data visualization integration        |
-| 6    | 15/03/2025           | Frontend-backend integration, full system testing                |
+| 6    | 15/03/2025           | Frontend-backend integration, full system testing               |
 | 7    | 10/04/2025           | Bug fixing, UI polishing, backend optimizations                  |
 | 8    | 20/04/2025 - 27/04/2025 | Finalization phase: documentation, feature extension ongoing     |
+| 9    | 28/04/2025           | Created `LOGBOOK.md`, Added Jenkinsfile for CI/CD pipeline       |
 
 ---
 
@@ -112,6 +117,38 @@
 
 ---
 
+## 📅 Week 9 (28/04/2025)
+
+### 🔹 Recent Commits
+- **Activities Completed**:
+  - Created `LOGBOOK.md` for project tracking and documentation.
+  - Added a `Jenkinsfile` for setting up CI/CD pipeline.
+  
+  **Recent Commit History**:
+  - **28/04/2025**: Create `LOGBOOK.md`
+  - **27/04/2025**: Create `Jenkinsfile` for automated CI/CD pipeline
+  - **21/04/2025**: Your commit message here
+  - **15/04/2025**: Merged remote main with local project
+  - **03/04/2025**: Model training file
+  - **03/04/2025**: Extract The Features
+  - **03/04/2025**: Add files via upload
+  - **02/03/2025**: Delete src/readme.md
+  - **02/03/2025**: Create README.MD
+  - **02/03/2025**: Delete doc/readme.md
+  - **02/03/2025**: Change file path
+  - **02/03/2025**: Change
+  - **02/03/2025**: Change file path
+  - **02/03/2025**: Create readme.md
+  - **02/03/2025**: Create readme.md
+  - **01/03/2025**: Data Analysis of Dataset
+  - **28/02/2025**: Create README.md
+  - **28/02/2025**: Generated Dataset
+  - **28/02/2025**: Dataset
+  - **28/02/2025**: Generate Dataset for training the model
+  - **28/02/2025**: Create main.yml
+
+---
+
 # 🚀 Project Highlights (So Far)
 
 - **AI-Powered**: Intelligent cryptographic algorithm detection using ML models.
@@ -140,7 +177,7 @@ Current modules are functional, and final polishing, testing, and feature enhanc
 
 ---
 
-# 📬 Contact
+# 📬 Contact  
 **Chaitanya Sonaje**  
 ✉️ Email: chaitanyasonaje0205@gmail.com  
 🔗 GitHub: [CryptoScan Repository](https://github.com/chaitanyasonaje/CryptoScan)
@@ -148,3 +185,7 @@ Current modules are functional, and final polishing, testing, and feature enhanc
 ---
 
 # 🌟 Thank You for Reviewing! 🌟
+
+---
+
+Let me know if you need further adjustments!
